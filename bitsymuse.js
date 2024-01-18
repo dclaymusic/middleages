@@ -48,8 +48,10 @@ var hackOptions = {
 	// Note: you can add <audio> tags to the html manually if you prefer
 	audio: {
 		// Note: the entries below are examples that should be removed and replaced with your own audio files
+		'nature': { src: 'nature.wav', loop: true },
 		'cathedral': { src: 'cathedral.wav', loop: true },
-		'chant': { src: 'chant.wav', loop: true },
+		'chant': { src: 'chant.wav', loop: true, volume: 0.6 },
+		'room': { src: 'room.wav', loop: true },
 		'A': { src: 'A.wav', volume: 1.0 },
 		'C': { src: 'C.wav', volume: 1.0 },
 		'D': { src: 'D.wav', volume: 1.0 },
@@ -81,10 +83,10 @@ var hackOptions = {
 	// Undefined rooms will keep playing whatever music they were last playing
 	musicByRoom: {
 		// Note: the entries below are examples that should be removed and replaced with your own room -> audio id mappings
-		0: 'S',
+		0: 'room',
 		1: 'chant', // This room is silent - it will stop music when you enter (see `silenceId` below)
 		2: 'cathedral',
-		3: 'harp'
+		3: 'nature'
 	},
 	silenceId: 'S', // Use this song ID to make a room fall silent.
 	resume: false, // If true, songs will pause/resume on change; otherwise, they'll stop/play (doesn't affect sound effects)
